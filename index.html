@@ -312,36 +312,47 @@
 
         </div>
     </div>
-
-    <!-- Carousel Start -->
-    <div class="container-fluid p-0 pb-5 mb-5">
-        <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active" style="min-height: 300px;">
-                    <img class="position-relative w-100 zoom-effect" src="static/images/college/index.jpg" 
-                         style="min-height: 300px; object-fit: cover;">
-                    <div class="carousel-caption d-flex align-items-center justify-content-center">
-                        <div class="p-5" style="width: 100%; max-width: 900px;">
-                            <div style="text-align: center;">
-                                <img src="static/images/college/uni_gif.gif" alt="" 
-                                     style="width: 20%;" class="zoom-container">
-                            </div>
-                            <div style="text-align: center;">
-                                <h5 class="text-white text-uppercase mb-md-3">Affiliated to Kerala University</h5>
-                            </div>
-                            
-                            <div style="text-align: center;">
-                                <h1 class="display-6 text-white mb-md-4">University Institute of Technology, Karuvatta</h1>
-                            </div>
-                            
+<!-- Carousel Start -->
+<div class="container-fluid p-0 pb-5 mb-5">
+    <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="min-height: 300px;">
+                <img class="position-relative w-100 zoom-effect carousel-img" src="static/images/college/index.jpg" 
+                     style="min-height: 300px; object-fit: cover;">
+                <div class="carousel-caption d-flex align-items-center justify-content-center">
+                    <div class="p-3 p-md-5" style="width: 100%; max-width: 900px;">
+                        <div class="text-center">
+                            <img src="static/images/college/uni_gif.gif" alt="" 
+                                 class="zoom-container img-fluid" style="max-width: 20%; min-width: 80px;">
+                        </div>
+                        <div class="text-center">
+                            <h5 class="text-white text-uppercase mb-2 mb-md-3">Affiliated to Kerala University</h5>
+                        </div>
+                        
+                        <div class="text-center">
+                            <h1 class="display-6 text-white mb-3 mb-md-4" style="font-size: calc(1.2rem + 1.5vw);">University Institute of Technology, Karuvatta</h1>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Carousel End -->
+</div>
 
+<!-- Add this style section in your head or in a stylesheet -->
+<style>
+    /* Target only small screens (mobile devices) */
+    @media (max-width: 767.98px) {
+        .carousel-item {
+            min-height: 450px !important;
+        }
+        .carousel-img {
+            min-height: 450px !important;
+            height: 60vh !important;
+        }
+    }
+</style>
+<!-- Carousel End -->
     <!-- About Start -->
     <div class="container-fluid">
         <div class="container py-5">
