@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UIT Karuvatta</title>
+    <link rel="stylesheet" href="static/css/style.css"> <!-- Add your CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+.
+
+    <style>
+        /* Zoom-in effect for the image */
+        .zoom-effect {
+            animation: zoomIn 8s ease-in-out infinite;
+        }
+
+        @keyframes zoomIn {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.10);
+                /* Slight zoom */
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container-fluid d-none d-lg-block">
+        <div class="row align-items-center py-4 px-xl-5">
+            <div class="col-lg-3">
+                <a href="" class="text-decoration-none">
+                    <img src="static/images/college/svg.svg" alt="Logo" style="max-width: 18rem;" class="ms-10">
+                </a>
+            </div>
+            <div class="col-lg-3 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <i class="fa fa-2x fa-map-marker-alt text-primary mr-3"></i>
+                    <div class="text-left">
+                        <h6 class="font-weight-semi-bold mb-1">Location</h6>
+
+                        <small>
+                            <a href="https://maps.app.goo.gl/tfMF7eyoi78cwoA4A" style="color: #023e8a;"> TB Junction Karuvatta P.O, Harippad
+                                Alappuzha 690517
+                            </a>
+                        </small>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <i class="fa fa-2x fa-envelope text-primary mr-3"></i>
+                    <div class="text-left">
+                        <h6 class="font-weight-semi-bold mb-1">Email Us</h6>
+                        <small><a href="mailto:uitkaruvatta@gmail.com" style="color: #023e8a;">uitkaruvatta@gmail.com</a></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <i class="fa fa-2x fa-phone text-primary mr-3"></i>
+                    <div class="text-left">
+                        <h6 class="font-weight-semi-bold mb-1">Call Us</h6>
+                        <small><a href="tel:+04792493366" style="color: #023e8a;">0479-2493366</a></small>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid">
+        <div class="row border-top px-xl-5">
+            <!-- <div class="col-lg-3 d-none d-lg-block">
+                <a class="d-flex align-items-center justify-content-between bg-secondary w-100 text-decoration-none"
+                    data-toggle="collapse" href="#navbar-vertical" style="height: 67px; padding: 0 30px;">
+                    <h5 class="text-primary m-0"><i class="fa fa-book-open mr-2"></i>Courses</h5>
+                    <i class="fa fa-angle-down text-primary"></i>
+                </a>
+                <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-light"
+                    id="navbar-vertical" style="width: calc(100% - 30px); z-index: 9;">
+                    <div class="navbar-nav w-100">
+                        <a href="{% url 'bsc-cs' %}" class="nav-link">BSc Computer Science</a>
+                        <a href="{% url 'bca' %}" class="nav-link">BCA Computer Application</a>
+                        <a href="{%url 'bcom-cop'%}" class="nav-link">B Com Co-Operation</a>
+                        <a href="{%url 'bcom-finance'%}" class="nav-link">B Com Finance</a>
+                    </div>
+                </nav>
+            </div> -->
+
+
+
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg bg-light navbar-light py-lg-0 py-3 px-0">
+                    <!-- Increased height here -->
+                    <!-- Mobile Logo -->
+                    <a href="#" class="text-decoration-none d-block d-lg-none">
+                        <img src="static/images/college/svg.svg" alt="Logo" style="max-width: 10rem;"
+                            class="ms-2">
+                    </a>
+                    <!-- Mobile Toggle Button -->
+                    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <style>
+                        /* Base style for the custom toggle button */
+                        .custom-toggler {
+                            border: none;
+                            /* Remove default border */
+                            background-color: #021526;
+                            /* Dark background */
+                            border-radius: 50%;
+                            /* Make the button circular */
+                            padding: 10px;
+                            /* Adjust padding to make the button round */
+                            width: 40px;
+                            /* Set width for circular shape */
+                            height: 40px;
+                            /* Set height for circular shape */
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            transition: background-color 0.3s, transform 0.3s;
+                            /* Smooth transition */
+                        }
+
+                        /* Customize the navbar-toggler icon */
+                        .custom-toggler .navbar-toggler-icon {
+                            background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+                            width: 20px;
+                            /* Set width for the icon */
+                            height: 20px;
+                            /* Set height for the icon */
+                        }
+
+                        /* Hover effect for the toggle button */
+                        .custom-toggler:hover {
+                            background-color: #f39c12;
+                            /* Change to a vibrant gold color on hover */
+                            transform: scale(1.1);
+                            /* Slight zoom effect */
+                        }
+
+                        /* Active state effect */
+                        .custom-toggler:active {
+                            background-color: #e67e22;
+                            /* Slightly darker shade for active state */
+                            transform: scale(0.95);
+                            /* Slight shrinking effect */
+                        }
+                    </style>
+                    <!-- Navbar Links -->
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
+                        <div class="navbar-nav py-0">
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            <a href="about.html" class="nav-item nav-link">About</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                                    aria-expanded="false">Courses</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="bsc_comp.html" class="dropdown-item">BSc Computer Science</a>
+                                    <a href="bca_comp.html" class="dropdown-item">BCA Computer Apllications</a>
+                                    <a href="bcom_finance.html" class="dropdown-item">BCom Finance</a>
+                                    <a href="bcom_cop.html" class="dropdown-item">BCom Co-Operation</a>
+                                </div>
+                            </div>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                                    aria-expanded="false">Facilities</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="computer_lab.html" class="dropdown-item">Computer Lab</a>
+                                    <a href="#" class="dropdown-item">Electronics Lab</a>
+                                    <a href="#" class="dropdown-item">Library</a>
+                                    <a href="#" class="dropdown-item">Scholarship and Grant</a>
+                                </div>
+                            </div>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                                    aria-expanded="false">Departments</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="" class="dropdown-item">Dept of Computer Science</a>
+                                    <a href="" class="dropdown-item">Dept of Commerce</a>
+                                    <a href="" class="dropdown-item">Dept of Mathematics</a>
+                                    <a href="" class="dropdown-item">Dept of Malayalam</a>
+                                    <a href="" class="dropdown-item">Dept of Hindi</a>
+                                </div>
+                            </div>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                                    aria-expanded="false">Associations </a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="nss.html" class="dropdown-item">National Service Scheme</a>
+                                    <a href="" class="dropdown-item">Parent Teacher Association</a>
+                                    <a href="clubs.html" class="dropdown-item">Clubs</a>
+                                </div>
+                            </div>
+                            <a href="other_staffs.html" class="nav-item nav-link">Teaching staffs</a>
+                            <a href="achievements.html" class="nav-item nav-link">Achievements</a>
+                        </div>
+                    </div>
+                    <style>
+                        .navbar-nav .nav-link:hover {
+                            color: #de7a0b !important;
+                        }
+
+                        /* Add a background color and styled border to the dropdown menu */
+                        .navbar .dropdown-menu {
+                            background-color: #ffffff;
+                            /* White background */
+                            border: 2px solid transparent;
+                            /* Transparent border initially */
+                            border-image: linear-gradient(to right, #ffc107, #007bff);
+                            /* Gradient border */
+                            border-image-slice: 1;
+                            /* Use the entire gradient */
+                            border-radius: 8px;
+                            /* Rounded corners */
+                            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                            /* Subtle shadow */
+                            opacity: 0;
+                            /* Initially hidden */
+                            visibility: hidden;
+                            /* Initially hidden */
+                            transition: opacity 0.3s ease, visibility 0s 0.3s, transform 0.3s ease;
+                            /* Smooth transitions */
+                            transform: translateY(-10px);
+                            /* Slightly offset for animation */
+                        }
+
+                        /* Hover effect for dropdown items */
+                        .navbar .dropdown-item {
+                            padding: 5px 15px;
+                            /* Add padding */
+                            transition: background-color 0.3s ease, color 0.3s ease;
+                            /* Smooth hover effect */
+                        }
+
+                        .navbar .dropdown-item:hover {
+                            background-color: #021526;
+                            /* Yellow background on hover */
+                            color: #ffffff;
+                            /* White text */
+                        }
+
+                        /* Show the dropdown when hovering over the parent dropdown */
+                        .navbar .dropdown:hover .dropdown-menu {
+                            opacity: 1;
+                            /* Fully visible */
+                            visibility: visible;
+                            /* Make visible */
+                            transform: translateY(0);
+                            /* Slide down into place */
+                            transition-delay: 0s;
+                            /* No delay when showing */
+                        }
+
+                        /* Add hover effect to dropdown toggle links */
+                        .navbar .dropdown-toggle:hover {
+                            color: #ffc107;
+                            /* Yellow color on hover */
+                            text-decoration: none;
+                        }
+
+                        /* Add a custom border hover effect to the dropdown menu */
+                        .navbar .dropdown:hover .dropdown-menu {
+                            border-color: #021526;
+                            /* Yellow border on hover */
+                        }
+                    </style>
+
+
+
+                    <!-- Admissions Button (Only visible on large screens) -->
+                    <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block"
+                        href="https://admissions.keralauniversity.ac.in/fyugpHome.php">Admissions</a>
+                </nav>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+
+    <section class="nss_section py-5">
+        <div class="container">
+            <!-- Page Title -->
+            <h2 class="text-center mb-5" style=" font-weight: bold;">National Service Scheme (NSS)</h2>
+    
+            <!-- Introduction Row -->
+            <div class="row gy-4">
+                <!-- Text Column -->
+                <div class="col-lg-6 order-2 order-lg-1">
+                    <h3>About NSS</h3>
+                    <p style="color: #555; line-height: 1.8;">
+                        The National Service Scheme (NSS) at UIT College is a vibrant platform for students to contribute towards societal welfare. NSS aims at developing students' personalities through community service, fostering a sense of social responsibility, and instilling leadership qualities.
+                    </p>
+                    <p style="color: #555; line-height: 1.8;">
+                        NSS volunteers actively participate in activities such as community clean-ups, awareness campaigns, and blood donation drives, making a positive impact on society.
+                    </p>
+                    <ul style="list-style-type: disc; padding-left: 20px; color: #555;">
+                        <li>Focus on social service and personality development</li>
+                        <li>Active involvement in community welfare programs</li>
+                        <li>Opportunities to lead and collaborate with peers</li>
+                    </ul>
+                </div>
+                <!-- Image Column -->
+                <div class="col-lg-6 order-1 order-lg-2 text-center">
+                    <img src="static/img/nss2.png" class="img-fluid rounded shadow" alt="NSS Banner" style="max-width: 100%; height: auto;">
+                </div>
+            </div>
+    
+            <!-- Activities Section -->
+            <div class="mt-5">
+                <h3 class="text-center mb-4" style=" font-weight: bold;">NSS Activities</h3>
+                <div class="row gy-4">
+                    <!-- Activity 1 -->
+                    <div class="col-md-4">
+                        <div class="card shadow-sm h-100">
+                            <img src="static/images/events/my_bhart.jpg" class="card-img-top" alt="Cleanliness Drive">
+                            <div class="card-body">
+                                <h5 class="card-title">Cleanliness Drive</h5>
+                                <p class="card-text">
+                                    NSS volunteers actively organize campus and community clean-up campaigns to promote hygiene and cleanliness.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Activity 2 -->
+                    <div class="col-md-4">
+                        <div class="card shadow-sm h-100">
+                            <img src="static/images/events/environmental_day.jpg" class="card-img-top" alt="Blood Donation Camp">
+                            <div class="card-body">
+                                <h5 class="card-title">Enviromental Day </h5>
+                                <p class="card-text">
+                                    "On Environmental Day, our college hosts a tree-planting drive to foster sustainability and green initiatives."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Activity 3 -->
+                    <div class="col-md-4">
+                        <div class="card shadow-sm h-100">
+                            <img src="static/images/events/my_bhart.jpg" class="card-img-top" alt="Awareness Campaigns">
+                            <div class="card-body">
+                                <h5 class="card-title">Awareness Campaigns</h5>
+                                <p class="card-text">
+                                    Campaigns on health, education, and environment are organized to educate and empower the community.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Contact Information -->
+            <div class="mt-5">
+                <h3 class="text-center mb-4" style=" font-weight: bold;">Contact NSS Coordinator</h3>
+                <div class="text-center">
+                    <p style="color: #44425a;"><strong>Coordinator:</strong> Mrs Ashalekshmi</p>
+                    <p style="color: #44425a;"><strong>Email:</strong> ashalekshmi.nss@uitcollege.edu</p>
+                    <p style="color: #44425a;"><strong>Phone:</strong> +91 8547819015</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- NSS Section End -->
+    
+<!-- Footer Start -->
+<div class="container-fluid text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px; background-image: url('static/images/college/index.jpg'); background-size: cover; background-position: center; position: relative;">
+    <!-- Dark overlay for the background image -->
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.85); z-index: 0;"></div>
+    
+    <style>
+        .footer-link {
+            text-decoration: none !important;
+            color: #ffffff !important;
+            transition: color 0.3s;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-link:hover {
+            color: #f39c12 !important;
+        }
+
+        .footer-social .btn {
+            border-color: #ffffff !important;
+            color: #ffffff !important;
+            transition: all 0.3s;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-social .btn:hover {
+            background-color: #f39c12 !important;
+            border-color: #f39c12 !important;
+            color: #021526 !important;
+        }
+        
+        .footer-content {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+    
+    <div class="row pt-5 footer-content">
+        <div class="col-lg-8 col-md-12">
+            <div class="row">
+                <div class="col-md-4 mb-5">
+                    <img src="static/images/college/svg-3.svg" alt="Logo" style="max-width: 15rem;"
+                        class="ms-10 mb-3">
+                    <p><i class="fa fa-map-marker-alt mr-2"></i>TB Junction, Karuvatta P.O, Harippad, Alappuzha
+                        690517</p>
+                    <p><i class="fa fa-phone mr-2"></i>0479-2493366</p>
+                    <p><i class="fa fa-envelope mr-2"></i>uitkaruvatta@gmail.com</p>
+                    <div class="footer-social d-flex mt-4">
+                        <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-square mr-2"
+                            href="https://www.facebook.com/UniversityInstituteOfTechnologyKaruvatta/"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-square mr-2" href="#"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-5">
+                    <h5 class="text-uppercase mb-4" style="letter-spacing: 5px; color: #f39c12;">Our Courses</h5>
+                    <div class="d-flex flex-column">
+                        <a class="footer-link mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>BSc
+                            ComputerScience</a>
+                        <a class="footer-link mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>BCA
+                            ComputerApplications</a>
+                        <a class="footer-link mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>B Com Finance</a>
+                        <a class="footer-link mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>B Com
+                            Co-Operation</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-5">
+                    <h5 class="text-uppercase mb-4" style="letter-spacing: 5px; color: #f39c12;">Departments</h5>
+                    <div class="d-flex flex-column">
+                        <a class="footer-link mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Dept of Computer
+                            Science</a>
+                        <a class="footer-link mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Dept of
+                            Commerce</a>
+                        <a class="footer-link mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Dept of
+                            Maths</a>
+                        <a class="footer-link mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Dept of
+                            Malayalam</a>
+                        <a class="footer-link mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Dept of
+                            Hindi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-12 mb-5">
+            <h5 class="text-uppercase mb-4" style="letter-spacing: 5px; color: #f39c12;">Location</h5>
+            <div style="width: 100%; height: 200px;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3937.214547135143!2d76.4299407!3d9.314248899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b089fbf18e800cd%3A0xe4145184522d8fbb!2sUIT%20Karuvatta!5e0!3m2!1sen!2sin!4v1734939606933!5m2!1sen!2sin"
+                    width="100%" height="250" style="border:0; border-radius: 10px; " allowfullscreen=""
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .footer-hostlane {
+        text-decoration: none;
+        color: #f39c12;
+        transition: color 0.3s;
+    }
+
+    .footer-hostlane:hover {
+        color: #ffffff !important;
+        text-decoration: none;
+    }
+</style>
+
+<div class="container-fluid text-white border-top py-4 px-sm-3 px-md-5" style="background-color: #000;">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+            <p class="m-0 text-white">Copyright &copy; 2024 <span style="color: #f39c12;">UIT Karuvatta</span> |
+                Designed by <a href="#" class="footer-hostlane">Hostlane Technolab</a></p>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib\owlcarousel\owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail\jqBootstrapValidation.min.js"></script>
+    <script src="mail\contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js\main.js"></script>
+</body>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+
+</body>
+</html>
+
+
