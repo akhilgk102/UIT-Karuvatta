@@ -481,6 +481,154 @@
     </div>
     <!-- Courses End -->
 
+    <style>
+        .stats-banner {
+            background-color: #000000; /* Vibrant orange color */
+            /* background-image: radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.1) 0%, rgba(255, 140, 0, 0.6) 80%); */
+            color: rgb(255, 255, 255);
+            padding: 50px 0;
+            text-align: center;
+            width: 100%;
+            min-height: 320px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .stats-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: repeating-radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 10px);
+            z-index: 1;
+            opacity: 0.6;
+        }
+
+        .stat-item {
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+            margin: 15px 0;
+        }
+
+        .stat-number {
+            font-size: 5rem;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 1.3rem;
+            margin-top: 5px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .stats-banner {
+                padding: 30px 0;
+            }
+            
+            .stat-item {
+                width: 50%;
+                padding: 10px;
+            }
+            
+            .stat-number {
+                font-size: 3.5rem;
+            }
+            
+            .stat-label {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .stat-item {
+                width: 100%;
+            }
+        }
+    </style>
+
+<div class="stats-banner">
+    <div class="stat-item">
+        <div class="stat-number" data-target="4">0+</div>
+        <div class="stat-label">Courses</div>
+    </div>
+    <div class="stat-item">
+        <div class="stat-number" data-target="5">0+</div>
+        <div class="stat-label">Departments</div>
+    </div>
+    <div class="stat-item">
+        <div class="stat-number" data-target="50">0+</div>
+        <div class="stat-label">Faculties</div>
+    </div>
+    <div class="stat-item">
+        <div class="stat-number" data-target="300">0+</div>
+        <div class="stat-label">Students</div>
+    </div>
+</div>
+
+<script>
+    // Function to animate counting up
+    function animateCountUp() {
+        const statNumbers = document.querySelectorAll('.stat-number');
+        
+        statNumbers.forEach(element => {
+            const target = parseInt(element.getAttribute('data-target'));
+            const duration = 2000; // animation duration in milliseconds
+            
+            // Adjust speed based on the target number
+            // Smaller numbers need fewer steps to look smooth
+            const steps = target < 10 ? target : 40;
+            const interval = duration / steps;
+            
+            let currentNumber = 0;
+            let step = 0;
+            
+            const counter = setInterval(() => {
+                step++;
+                // For small numbers, increment by 1 each step until we reach the target
+                if (target < 10) {
+                    currentNumber = step;
+                } else {
+                    // For larger numbers, calculate the proportional increase
+                    currentNumber = Math.floor((step / steps) * target);
+                }
+                
+                // Always display as integer with plus sign
+                element.textContent = Math.min(target, Math.floor(currentNumber)) + "+";
+                
+                if (currentNumber >= target) {
+                    clearInterval(counter);
+                    element.textContent = target + "+"; // Ensure the final number is exactly the target with +
+                }
+            }, interval);
+        });
+    }
+
+    // Start animation when page loads
+    document.addEventListener('DOMContentLoaded', animateCountUp);
+    
+    // Re-trigger animation when element comes into view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCountUp();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    observer.observe(document.querySelector('.stats-banner'));
+</script>
+
 
     <!-- Event Start -->
     <div class="container-fluid py-5">
