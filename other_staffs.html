@@ -328,6 +328,76 @@
                 <div class="col-md-6 col-lg-3 text-center team mb-4">
                     <div class="team-item rounded overflow-hidden mb-2">
                         <div class="team-img position-relative">
+                            <!-- HOD Badge -->
+                            <span class="hod-badge">HOD</span>
+
+                            <img class="img-fluid w-100"
+                                style="height: 250px; object-fit: contain; background-color: white;"
+                                src="static/images/other_staffs/binuja.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="bg-secondary p-4">
+                            <h5>Binuja</h5>
+                            <h6>MCA, B.Ed, SET</h6>
+                            <p class="m-0">Dept of Computer Science</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <style>
+                    .hod-badge {
+                        position: absolute;
+                        top: 15px;
+                        right: 15px;
+                        background: linear-gradient(135deg, #0062cc, #0099ff);
+                        color: white;
+                        padding: 6px 14px;
+                        font-size: 14px;
+                        font-weight: bold;
+                        border-radius: 20px;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+                        z-index: 10;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                        border: 2px solid rgba(255, 255, 255, 0.4);
+                        transition: all 0.3s ease;
+                    }
+
+                    .hod-badge:hover {
+                        transform: translateY(-2px);
+                        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+                    }
+
+                    /* You can optionally add this animation for more visual interest */
+                    @keyframes pulse {
+                        0% {
+                            transform: scale(1);
+                        }
+
+                        50% {
+                            transform: scale(1.05);
+                        }
+
+                        100% {
+                            transform: scale(1);
+                        }
+                    }
+
+                    .team-item:hover .hod-badge {
+                        animation: pulse 1.5s infinite ease-in-out;
+                    }
+                </style>
+                <div class="col-md-6 col-lg-3 text-center team mb-4">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="team-img position-relative">
                             <img class="img-fluid w-100"
                                 style="height: 250px; object-fit: contain; background-color: white;"
                                 style="height: 250px; object-fit: cover;" src="static/images/other_staffs/smitha.jpg"
@@ -413,8 +483,7 @@
                         </div>
                         <div class="bg-secondary p-4">
                             <h5>Dr.Soumya.I.R.</h5>
-                            <h6>M.Com,M.Ed,Ph.D</h6>
-                            <p class="m-0">HOD</p>
+                            <h6>M.Com, M.Ed, Ph.D</h6>
                             <p class="m-0">Dept Of Commerce</p>
                         </div>
                     </div>
@@ -466,6 +535,11 @@
                         </div>
                     </div>
                 </div>
+
+
+
+
+
                 <!-- <div class="col-md-6 col-lg-3 text-center team mb-4">
                 <div class="team-item rounded overflow-hidden mb-2">
                     <div class="team-img position-relative">
@@ -504,128 +578,131 @@
     <!-- Team End -->
 
 
-<!-- Footer Start -->
-<div class="container-fluid text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px; background-image: url('static/images/college/index.jpg'); background-size: cover; background-position: center; position: relative;">
-    <!-- Dark overlay for the background image -->
-    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.85); z-index: 0;"></div>
-    
+    <!-- Footer Start -->
+    <div class="container-fluid text-white py-5 px-sm-3 px-lg-5"
+        style="margin-top: 90px; background-image: url('static/images/college/index.jpg'); background-size: cover; background-position: center; position: relative;">
+        <!-- Dark overlay for the background image -->
+        <div
+            style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.85); z-index: 0;">
+        </div>
+
+        <style>
+            .footer-link {
+                text-decoration: none !important;
+                color: #ffffff !important;
+                transition: color 0.3s;
+                position: relative;
+                z-index: 1;
+            }
+
+            .footer-link:hover {
+                color: #f39c12 !important;
+            }
+
+            .footer-social .btn {
+                border-color: #ffffff !important;
+                color: #ffffff !important;
+                transition: all 0.3s;
+                position: relative;
+                z-index: 1;
+            }
+
+            .footer-social .btn:hover {
+                background-color: #f39c12 !important;
+                border-color: #f39c12 !important;
+                color: #021526 !important;
+            }
+
+            .footer-content {
+                position: relative;
+                z-index: 1;
+            }
+        </style>
+
+        <div class="row pt-5 footer-content">
+            <div class="col-lg-8 col-md-12">
+                <div class="row">
+                    <div class="col-md-4 mb-5">
+                        <img src="static/images/college/svg-3.svg" alt="Logo" style="max-width: 15rem;"
+                            class="ms-10 mb-3">
+                        <p><i class="fa fa-map-marker-alt mr-2"></i>TB Junction, Karuvatta P.O, Harippad, Alappuzha
+                            690517</p>
+                        <p><i class="fa fa-phone mr-2"></i>0479-2493366</p>
+                        <p><i class="fa fa-envelope mr-2"></i>uitkaruvatta@gmail.com</p>
+                        <div class="footer-social d-flex mt-4">
+                            <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-square mr-2"
+                                href="https://www.facebook.com/UniversityInstituteOfTechnologyKaruvatta/"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-square mr-2" href="#"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-uppercase mb-4" style="letter-spacing: 5px; color: #f39c12;">Our Courses</h5>
+                        <div class="d-flex flex-column">
+                            <a class="footer-link mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>BSc
+                                ComputerScience</a>
+                            <a class="footer-link mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>BCA
+                                ComputerApplications</a>
+                            <a class="footer-link mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>B Com Finance</a>
+                            <a class="footer-link mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>B Com
+                                Co-Operation</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-uppercase mb-4" style="letter-spacing: 5px; color: #f39c12;">Departments</h5>
+                        <div class="d-flex flex-column">
+                            <a class="footer-link mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Dept of Computer
+                                Science</a>
+                            <a class="footer-link mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Dept of
+                                Commerce</a>
+                            <a class="footer-link mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Dept of
+                                Maths</a>
+                            <a class="footer-link mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Dept of
+                                Malayalam</a>
+                            <a class="footer-link mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Dept of
+                                Hindi</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 mb-5">
+                <h5 class="text-uppercase mb-4" style="letter-spacing: 5px; color: #f39c12;">Location</h5>
+                <div style="width: 100%; height: 200px;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3937.214547135143!2d76.4299407!3d9.314248899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b089fbf18e800cd%3A0xe4145184522d8fbb!2sUIT%20Karuvatta!5e0!3m2!1sen!2sin!4v1734939606933!5m2!1sen!2sin"
+                        width="100%" height="250" style="border:0; border-radius: 10px; " allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <style>
-        .footer-link {
-            text-decoration: none !important;
-            color: #ffffff !important;
+        .footer-hostlane {
+            text-decoration: none;
+            color: #f39c12;
             transition: color 0.3s;
-            position: relative;
-            z-index: 1;
         }
 
-        .footer-link:hover {
-            color: #f39c12 !important;
-        }
-
-        .footer-social .btn {
-            border-color: #ffffff !important;
+        .footer-hostlane:hover {
             color: #ffffff !important;
-            transition: all 0.3s;
-            position: relative;
-            z-index: 1;
-        }
-
-        .footer-social .btn:hover {
-            background-color: #f39c12 !important;
-            border-color: #f39c12 !important;
-            color: #021526 !important;
-        }
-        
-        .footer-content {
-            position: relative;
-            z-index: 1;
+            text-decoration: none;
         }
     </style>
-    
-    <div class="row pt-5 footer-content">
-        <div class="col-lg-8 col-md-12">
-            <div class="row">
-                <div class="col-md-4 mb-5">
-                    <img src="static/images/college/svg-3.svg" alt="Logo" style="max-width: 15rem;"
-                        class="ms-10 mb-3">
-                    <p><i class="fa fa-map-marker-alt mr-2"></i>TB Junction, Karuvatta P.O, Harippad, Alappuzha
-                        690517</p>
-                    <p><i class="fa fa-phone mr-2"></i>0479-2493366</p>
-                    <p><i class="fa fa-envelope mr-2"></i>uitkaruvatta@gmail.com</p>
-                    <div class="footer-social d-flex mt-4">
-                        <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-square mr-2"
-                            href="https://www.facebook.com/UniversityInstituteOfTechnologyKaruvatta/"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-square mr-2" href="#"><i
-                                class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-outline-light btn-square" href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <h5 class="text-uppercase mb-4" style="letter-spacing: 5px; color: #f39c12;">Our Courses</h5>
-                    <div class="d-flex flex-column">
-                        <a class="footer-link mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>BSc
-                            ComputerScience</a>
-                        <a class="footer-link mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>BCA
-                            ComputerApplications</a>
-                        <a class="footer-link mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>B Com Finance</a>
-                        <a class="footer-link mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>B Com
-                            Co-Operation</a>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <h5 class="text-uppercase mb-4" style="letter-spacing: 5px; color: #f39c12;">Departments</h5>
-                    <div class="d-flex flex-column">
-                        <a class="footer-link mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Dept of Computer
-                            Science</a>
-                        <a class="footer-link mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Dept of
-                            Commerce</a>
-                        <a class="footer-link mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Dept of
-                            Maths</a>
-                        <a class="footer-link mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Dept of
-                            Malayalam</a>
-                        <a class="footer-link mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Dept of
-                            Hindi</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-12 mb-5">
-            <h5 class="text-uppercase mb-4" style="letter-spacing: 5px; color: #f39c12;">Location</h5>
-            <div style="width: 100%; height: 200px;">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3937.214547135143!2d76.4299407!3d9.314248899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b089fbf18e800cd%3A0xe4145184522d8fbb!2sUIT%20Karuvatta!5e0!3m2!1sen!2sin!4v1734939606933!5m2!1sen!2sin"
-                    width="100%" height="250" style="border:0; border-radius: 10px; " allowfullscreen=""
-                    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+
+    <div class="container-fluid text-white border-top py-4 px-sm-3 px-md-5" style="background-color: #000;">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 text-center">
+                <p class="m-0 text-white">Copyright &copy; 2024 <span style="color: #f39c12;">UIT Karuvatta</span> |
+                    Designed by <a href="#" class="footer-hostlane">Hostlane Technolab</a></p>
             </div>
         </div>
     </div>
-</div>
-
-<style>
-    .footer-hostlane {
-        text-decoration: none;
-        color: #f39c12;
-        transition: color 0.3s;
-    }
-
-    .footer-hostlane:hover {
-        color: #ffffff !important;
-        text-decoration: none;
-    }
-</style>
-
-<div class="container-fluid text-white border-top py-4 px-sm-3 px-md-5" style="background-color: #000;">
-    <div class="row justify-content-center">
-        <div class="col-lg-6 text-center">
-            <p class="m-0 text-white">Copyright &copy; 2024 <span style="color: #f39c12;">UIT Karuvatta</span> |
-                Designed by <a href="#" class="footer-hostlane">Hostlane Technolab</a></p>
-        </div>
-    </div>
-</div>
-<!-- Footer End -->
+    <!-- Footer End -->
 
 
 
